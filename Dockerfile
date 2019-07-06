@@ -22,6 +22,9 @@ CMD ["tomcat8", "run", "-web"]
 EXPOSE 8000
 
 
+
+
+
 FROM tomcat
 RUN apt-get update -qq && apt-get install default-jdk -y && apt-get install git -y && apt-get install maven -y
 RUN mkdir git && cd git && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git && cd boxfuse-sample-java-war-hello && mvn package
